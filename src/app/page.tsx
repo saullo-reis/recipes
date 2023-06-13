@@ -1,4 +1,5 @@
 import { Header } from "@/components/header/Header"
+import { Homes } from "@/components/home/Home"
 import Head from "next/head"
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
         />
       </Head>
       <Header />
+      <Homes/>
     </>
     )
 }
