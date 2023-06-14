@@ -9,5 +9,24 @@ export const getFoods = async (letter) => {
         console.error(err)
         throw err
     }
-    
+}
+
+export const getCategories = async () => {
+    try{
+        const response = await axios.get(urlBase + 'categories.php')
+        return response.data.categories
+    }catch(err){
+        console.error(err)
+        throw err
+    }
+}
+
+export const getRandomFood = async () => {
+    try{
+        const response = await axios.get(urlBase + 'random.php')
+        return response.data
+    }catch(err){
+        console.error(err)
+        throw err
+    }
 }

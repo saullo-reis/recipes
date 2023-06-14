@@ -1,0 +1,29 @@
+.categories
+    display: flex
+    flex-flow: row wrap
+    align-items: center
+    justify-content: center
+    margin-top: 50px
+    &-item
+        position: relative
+        margin: 5px
+        display: flex
+        align-items: center
+        cursor: pointer
+        justify-content: center
+        &:hover
+            .image-categories
+                background-size: 200px
+        .name-categories
+            font-weight: 700
+            color: #fff
+            position: absolute
+            text-shadow: 10px 10px 6px black
+            z-index: 3
+        .image-categories
+            width: 150px
+            height: 100px
+            background-size: cover
+            background-repeat: no-repeat
+            background-position: center
+            
