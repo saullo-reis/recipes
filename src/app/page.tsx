@@ -1,15 +1,13 @@
-import { Header } from "@/components/header/Header"
-import { Homes } from "@/components/home/Home"
-import Head from "next/head"
+import { Header } from "@/app/components/header/Header"
+import { Homes } from "@/app/components/home/Home"
+import { Footer } from "./components/footer/Footer"
 
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>Recipes</title>
-      </Head>
       <Header />
       <Homes/>
+      <Footer/>
     </>
     )
 }
