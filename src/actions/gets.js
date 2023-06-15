@@ -30,3 +30,13 @@ export const getRandomFood = async () => {
         throw err
     }
 }
+
+export const getAreasFood = async () => {
+    try{
+        const response = await axios.get(urlBase+"list.php?a=list")
+        return response.data
+    }catch(err){
+        console.error(err)
+        throw err
+    }
+}
