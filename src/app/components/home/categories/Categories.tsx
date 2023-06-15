@@ -1,14 +1,14 @@
 "use client"
 
 import { useEffect, useState, MutableRefObject } from "react"
-import { getCategories } from '../../../actions/gets'
+import { getCategories } from '../../../../actions/gets'
 import './CategoriesStyle.sass'
 
 interface categoriesProps {
     idCategory: string,
     strCategory: string,
     strCategoryThumb: string
-    map: any
+    map: void
 }
 
 export const Categories = () => {

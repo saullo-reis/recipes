@@ -3,7 +3,7 @@
     flex-flow: row wrap
     align-items: center
     justify-content: center
-    margin-top: 50px
+    margin-bottom: 100px
     &-item
         position: relative
         margin: 5px
@@ -11,19 +11,22 @@
         align-items: center
         cursor: pointer
         justify-content: center
+        overflow: hidden
         &:hover
             .image-categories
-                background-size: 200px
+                transform: scale(1.2)
+                filter: grayscale(0)
         .name-categories
             font-weight: 700
             color: #fff
             position: absolute
-            text-shadow: 10px 10px 6px black
+            text-shadow: 2px 2px 4px black
             z-index: 3
         .image-categories
-            width: 150px
-            height: 100px
+            width: 200px
+            height: 150px
+            background-position: center
             background-size: cover
             background-repeat: no-repeat
-            background-position: center
-            
+            transition: .7s
+            filter: grayscale(80%)
