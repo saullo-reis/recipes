@@ -3,17 +3,15 @@
 import './RandomFoodStyles.sass'
 import { getRandomFood } from '@/actions/gets'
 import { useEffect, useState } from 'react'
-
 interface RandomFoodProps{
     strMeal: string,
     strMealThumb: string,
     idMeal: string
 }
 
-
-
 export const RandomFood = () => {
     const [food, setFood] = useState<RandomFoodProps>()
+
     const infoDoc = document.getElementsByClassName('random-food-info')
     console.log(infoDoc)
     const randomFoodDoc = document.getElementsByClassName('random-food')
@@ -25,8 +23,6 @@ export const RandomFood = () => {
         infoDoc[0]?.classList.add('close-text')
         infoDoc[0]?.classList.remove('open-text')
     })
-
-    
 
     useEffect(() => {
         const fetchData = async () => {
