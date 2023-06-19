@@ -5,35 +5,60 @@
     justify-content: center
     border-bottom: solid 1px #ccc
     opacity: 0
+    z-index: 3
     animation: headerDrop 1s ease forwards
     &-logo
         width: 200px
         height: 200px
+    .error
+        color: red
+        font-size: 10px
     &-form
         margin-left: 10px
         width: 50%
         display: flex
         flex-flow: nowrap
-        .text
-            border: none
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+        flex-direction: column
+        position: relative
+        .sugestions
+            position: absolute
             background-color: #D9D9D9
+            top: 45px
+            border-radius: 10px
             padding: 10px
-            border-top-left-radius: 16px
-            border-bottom-left-radius: 16px
-            width: 80%
+            width: 75%
+            left: 20px
+            &-itens
+                width: 100%
+                cursor: pointer
+                transition: .3s
+                &:hover
+                    background-color: gray
+                &-name
+                    font-size: 15px
+        div
+            display: flex
+            .text
+                border: none
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+                background-color: #D9D9D9
+                padding: 10px
+                border-top-left-radius: 16px
+                border-bottom-left-radius: 16px
+                width: 80%
             &:focus
                 outline: solid 1px black
-        .button
-            border: none
-            padding: 10px
-            background-color: #e67d21
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
-            color: #fff
-            font-weight: 700
-            border-top-right-radius: 16px
-            border-bottom-right-radius: 16px
-            cursor: pointer
+            .button
+                border: none
+                padding: 10px
+                background-color: #e67d21
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+                color: #fff
+                font-weight: 700
+                border-top-right-radius: 16px
+                border-bottom-right-radius: 16px
+                cursor: pointer
+        
     @media (max-width: 470px) 
         flex-direction: column
     
