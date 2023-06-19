@@ -40,3 +40,13 @@ export const getAreasFood = async () => {
         throw err
     }
 }
+
+export const getFoodArea = async (country) => {
+    try{
+        const response = await axios.get(urlBase +"filter.php?a="+country)
+        return response.data
+    }catch(err){
+        console.error(err)
+        throw err
+    }
+}
