@@ -2,6 +2,7 @@
 
 import { getAreasFood } from "@/actions/gets"
 import { AreasProps } from "@/utils/utils"
+import Link from "next/link"
 import { useEffect, useState } from "react"
 import './AreasStyle.sass'
 
@@ -22,9 +23,11 @@ export const Areas = () => {
             {
             areas?.map((element: AreasProps, index: number) => {
                 return(
-                    <li className="areas-item" key={index}>
-                        <p className="areas-item-text">{element.strArea}</p>
-                    </li>
+                    <Link href={`/areas/${element.strArea}`} key={index}>
+                        <li className="areas-item" key={index}>
+                            <p className="areas-item-text">{element.strArea}</p> 
+                        </li>
+                    </Link>   
                 )
             })}
         </ul>
