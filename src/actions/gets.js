@@ -50,3 +50,13 @@ export const getFoodArea = async (country) => {
         throw err
     }
 }
+
+export const getFood = async ( id ) => {
+    try{
+        const response = await axios.get(urlBase + "lookup.php?i=" + id)
+        return response.data
+    }catch(err){
+        console.error(err)
+        throw err
+    }
+}
