@@ -42,9 +42,12 @@ export const Header = () => {
                         {
                             sugestion?.map((element, index) => {
                                 return (
-                                    <li className='sugestions-itens' key={index} onClick={() => setSearchNameFood(element.strMeal)}>
-                                        <p className='sugestions-itens-name'>{element.strMeal}</p>
-                                    </li>
+                                    <Link className="link-sugestions" href={`/food/${element.idMeal}`}>
+                                        <li className='sugestions-itens' key={index} onClick={() => setSearchNameFood(element.strMeal)}>
+                                            <p className='sugestions-itens-name'>{element.strMeal}</p>
+                                        </li>
+                                    </Link>
+                                    
                                 )
                             })
                         }

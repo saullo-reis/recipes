@@ -4,12 +4,12 @@ import './RandomFoodStyles.sass'
 import { getRandomFood } from '@/actions/gets'
 import { useEffect, useState } from 'react'
 import { FoodProps } from '@/utils/utils'
+import Link from 'next/link'
 
 export const RandomFood = () => {
     const [food, setFood] = useState<FoodProps>()
 
     const infoDoc = document.getElementsByClassName('random-food-info')
-    console.log(infoDoc)
     const randomFoodDoc = document.getElementsByClassName('random-food')
     randomFoodDoc[0]?.addEventListener('mouseover', () => {
         infoDoc[0]?.classList.add('open-text')
@@ -29,12 +29,14 @@ export const RandomFood = () => {
     },[])
 
     return(
-        <section className='random-food'>
-            <div className='random-food-image' style={{ backgroundImage: `url(${food?.strMealThumb})` }}><span>{food?.strMeal}</span></div>
-            <div className='random-food-info'>
-                <h1 className='text'>Food for eat today</h1>
-                <h2 className='text'>Click for recipe</h2>
-            </div>
-        </section>
+        <Link className="link-random-food" href={`/food/${food?.idMeal}`}>
+            <section className='random-food'>
+                    <div className='random-food-image' style={{ backgroundImage: `url(${food?.strMealThumb})` }}><span>{food?.strMeal}</span></div>
+                    <div className='random-food-info'>
+                        <h1 className='text'>Food for eat today</h1>
+                        <h2 className='text'>Click for recipe</h2>
+                    </div>
+            </section>
+        </Link>
     )
 }

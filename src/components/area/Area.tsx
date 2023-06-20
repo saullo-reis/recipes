@@ -4,6 +4,7 @@ import { getFoodArea } from "@/actions/gets"
 import { useEffect, useState } from "react"
 import { FoodProps } from "@/utils/utils"
 import './AreaStyle.sass'
+import Link from "next/link"
 
 export const Area = (country: {props:{ slug: string }}) => {
     const [countryFoods, setCountryFoods] = useState<FoodProps[]>([])
@@ -23,9 +24,11 @@ export const Area = (country: {props:{ slug: string }}) => {
                 {
                     countryFoods.map((element, index) => {
                         return(
-                            <li className="area-container-item" key={index}>
-                                <div className="area-container-item-image" style={{ backgroundImage: `url(${element?.strMealThumb})` }}><span>{element?.strMeal}</span></div>
-                            </li>
+                            <Link key={index} href={`/food/${element.idMeal}`}>
+                                <li className="area-container-item" >
+                                    <div className="area-container-item-image" style={{ backgroundImage: `url(${element?.strMealThumb})` }}><span>{element?.strMeal}</span></div>
+                                </li>
+                            </Link>
                         )
                     })
                 }
