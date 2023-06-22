@@ -60,3 +60,13 @@ export const getFood = async ( id ) => {
         throw err
     }
 }
+
+export const getCategoryFood = async (category) => {
+    try{
+        const response = await axios.get(urlBase + "filter.php?c=" + category)
+        return response.data
+    }catch(err){
+        console.error(err)
+        throw err
+    }
+}
