@@ -9,18 +9,17 @@ import Link from 'next/link'
 export const RandomFood = () => {
     const [food, setFood] = useState<FoodProps>()
 
-    const infoDoc = document.getElementsByClassName('random-food-info')
-    const randomFoodDoc = document.getElementsByClassName('random-food')
-    randomFoodDoc[0]?.addEventListener('mouseover', () => {
-        infoDoc[0]?.classList.add('open-text')
-        infoDoc[0]?.classList.remove('close-text')
-    })
-    randomFoodDoc[0]?.addEventListener('mouseout', () => {
-        infoDoc[0]?.classList.add('close-text')
-        infoDoc[0]?.classList.remove('open-text')
-    })
-
     useEffect(() => {
+        const infoDoc = document.getElementsByClassName('random-food-info')
+        const randomFoodDoc = document.getElementsByClassName('random-food')
+        randomFoodDoc[0]?.addEventListener('mouseover', () => {
+            infoDoc[0]?.classList.add('open-text')
+            infoDoc[0]?.classList.remove('close-text')
+        })
+        randomFoodDoc[0]?.addEventListener('mouseout', () => {
+            infoDoc[0]?.classList.add('close-text')
+            infoDoc[0]?.classList.remove('open-text')
+        })
         const fetchData = async () => {
             const response = await getRandomFood()
             setFood(response.meals[0])
