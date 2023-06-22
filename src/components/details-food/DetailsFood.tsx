@@ -41,11 +41,13 @@ export const DetailsFood = (params: {params:{id:number}}) => {
                 <h1 className="title">{recipe?.strCategory}</h1>
                 <h1 className="title">{recipe?.strMeal}</h1>
             </div>
-            <iframe className='video'
-                title='Youtube player'
-                sandbox='allow-same-origin allow-forms allow-popups allow-scripts allow-presentation'
-                src={`https://youtube.com/embed/${youtubeId}?autoplay=0`}>
-            </iframe>
+            <div className='video'>
+                <iframe
+                    title='Youtube player'
+                    sandbox='allow-same-origin allow-forms allow-popups allow-scripts allow-presentation'
+                    src={`https://youtube.com/embed/${youtubeId}?autoplay=0`}>
+                </iframe>
+            </div>
             <div className="recipe-container">
                 <div className="recipe-container-item">
                     <h1 className="title">Ingredients</h1>
@@ -60,9 +62,12 @@ export const DetailsFood = (params: {params:{id:number}}) => {
 
                     })}  
                 </div>
+                <div>
+                    <h1 className="recipe-instructions">Instructions</h1>
+                    <p className="recipe-instructions-text">{recipe?.strInstructions}</p>
+                </div>
             </div>
-            <h1 className="recipe-instructions">Intructions</h1>
-            <p className="recipe-intructions-text">{recipe?.strInstructions}</p>
+            
         </section>
     )
 }
