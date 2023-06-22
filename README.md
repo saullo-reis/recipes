@@ -1,34 +1,36 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# README - Receitas deliciosas
 
-## Getting Started
+![favicon](https://github.com/saullo-reis/recipes/assets/93871055/da338a35-e5a1-4d2d-8fae-e337efe06fcc)
 
-First, run the development server:
+Bem-vindo ao projeto pessoal de receitas deliciosas! Aqui você encontrará uma coleção de receitas incríveis para experimentar e saborear. Se você é um entusiasta da culinária ou está apenas começando, este projeto é perfeito para você.
 
-```bash
+## Como usar
+Clone o repositório em sua máquina local usando o seguinte comando:
+
+```ruby
+git clone https://github.com/saullo-reis/recipes.git
+```
+Navegue até o diretório clonado:
+```ruby
+cd recipes
+```
+E inicialize ele com:
+
+```ruby
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Visão geral
+O projeto Receitas Deliciosas é um projeto onde existe comidas de algumas partes do mundo.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+O projeto é hospedado no Vercel e está disponível publicamente em: https://recipes-opal.vercel.app/
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Tecnologias utilizadas:
+- Sass
+- ReactJs
+- NextJs
+- axios
+- API TheMealDb LINK: https://www.themealdb.com/api.php
+  
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Explore o projeto para encontrar as receitas disponíveis. As receitas estão organizadas por categorias e paises, tornando mais fácil encontrar o tipo de prato desejado.
